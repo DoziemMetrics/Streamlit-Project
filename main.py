@@ -1,7 +1,8 @@
 import streamlit as st
 import pickle
 
-loadmodel = pickle.load(open('C:/Users/Mhizfair/Desktop/Streamlit Project/Data/Diabetes_model', 'rb'))
+loadmodel = loadmodel = pickle.load(open('/app/streamlit-project/Data/Diabetes_model', 'rb'))
+
 
 def main():
     st.title('Diabetes Prediction')
