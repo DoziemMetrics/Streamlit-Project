@@ -1,7 +1,13 @@
 import streamlit as st
 import pickle
+import os
 
-loadmodel = pickle.load(open('Data/Diabetes_model.pkl', 'rb'))
+MODEL_PATH = os.path.join("Data", "Diabetes_model.pkl")
+
+if not os.path.exists(MODEL_PATH):
+    raise FileNotFoundError(f"Model file not found at {MODEL_PATH}")
+
+loadmodel = pickle.load(open(MODEL_PATH, 'rb'))
 
 
 def main():
